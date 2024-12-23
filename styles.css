@@ -1,0 +1,139 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    /* Helps with scaling text based on viewport size */
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 5vw;
+    color: red;
+    margin-bottom: 20px;
+    animation: glitch 1s infinite;
+}
+
+p.creepy-text {
+    font-size: 2vw;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+button {
+    background-color: red;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: red;
+    border: 2px solid red;
+    font-size: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadein 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Keyframes for Glitch Effect */
+@keyframes glitch {
+    0% {
+        transform: translate(2px, -2px);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(0px, 0px);
+    }
+    60% {
+        transform: translate(-2px, -2px);
+    }
+    80% {
+        transform: translate(2px, 2px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vw;
+    }
+    p.creepy-text {
+        font-size: 4vw;
+    }
+    button {
+        font-size: 4vw;
+        padding: 0.5em 1em;
+    }
+    .popup {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 10vw;
+    }
+    p.creepy-text {
+        font-size: 5vw;
+    }
+    button {
+        font-size: 5vw;
+        padding: 0.5em 1em;
+    }
+    .popup {
+        font-size: 5vw;
+    }
+}
+
